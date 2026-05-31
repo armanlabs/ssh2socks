@@ -17,11 +17,11 @@ Maintained by [armanlabs](https://github.com/armanlabs).
 - Tunable relay and socket buffers for better throughput.
 - Basic UDP ASSOCIATE support for DNS/53 by relaying DNS over TCP through the SSH tunnel.
 
-## 🛡️ Feature Comparison: ssh2socks vs. Raw SSH Tunneling
+## Feature Comparison: ssh2socks vs. Raw SSH Tunneling
 
 | Feature | Raw `ssh -D` | ssh2socks |
 | :--- | :---: | :---: |
-| **DNS Leak Protection (UDP Relay)** | ❌ No (Leaks DNS easily) | ✅ Yes (Safe DNS relay over TCP) |
+| **DNS Leak Protection (UDP Relay)** | ❌ No (Leaks DNS easily) | ⚠️ Partial DNS relay over TCP (experimental) |
 | **Auto-Reconnect** | ❌ No (Requires manual restart) | ✅ Yes (Background auto-recovery) |
 | **Windows Ease-of-Use** | ⚠️ Hard (Needs CMD/OpenSSH setup) | ✅ Easy (Standalone portable `.exe`) |
 | **Configuration Ease** | ⚠️ Hard (Long CLI arguments) | ✅ Easy (Structured `.env` file) |
